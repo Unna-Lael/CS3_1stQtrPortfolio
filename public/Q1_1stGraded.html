@@ -1,4 +1,168 @@
-<script>
-document.write("Hi! My name is *Unna*, and this is my portfolio. How do I make the text here bigger? I don't know! ");
+<!DOCTYPE html>
+<html>
+<head>
+  <title> ~ Unna's Portfolio ~ </title>
+  <style> 
+    body {
+      font-family: Garamond;
+      margin: 0;
+      padding: 0;
+      background-color: #543884; 
+      color: #fff; 
+      line-height: 1.5; 
+    }
+
+    .main-header {
+      background-color: #262254;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .main-header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav {
+      background-color: #262254;
+      color: #fff;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline; 
+      margin: 15px;
+    }
+
+    nav ul li a {
+      color: #9a77cf;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: purple;
+    }
+
+    main {
+      padding: 20px;
+      margin: 50px;
+      background-color: #D8CBC7;
+      box-shadow: 0 0 20px rgb(77, 7, 83);
+      color: #000; /* So you can read it on the light background */
+    }
+
+    .content-section {
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px dashed #ec4167;
+      font-weight: bold;
+    }
+
+    .content-section h2 {
+      color: #a13670;
+      border-bottom: 1.5px solid pink;
+      padding-bottom: 5px;
+    }
+
+    #myButton {
+      font-family: Garamond;
+      background-color: #530456;
+      color: white;
+      border: 3px;
+      padding: 12px;
+      margin-top: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+      transition-duration: 0.5s;
+    }
+
+    #myButton:hover {
+      box-shadow: 0 0 5px rgba(0,0,0,1);
+      transform:  translate(0, -2px);
+      background-color: #D8CBC7;
+      color: #a13670;
+      border: 1.5px solid #3C0000
+    }
+
+    footer {
+      background-color: #262254;
+      color: #fff;
+      padding: 10px;
+      margin-top: 1em;
+      text-align: center;
+    }
+
+    .intro-text {
+      font-size: 32px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <<body>
+  <header class = "main-header"> 
+    <h1>~ Unna's Portfolio ~</h1>  
+
+  </header>  
   
-</script>
+
+  <nav>
+
+    <ul>  
+      <li><a href="#1-about">About Me</a></li> <!-- this is a list object--> 
+      <li><a href="#2-services">Interests</a></li> <!-- this is a list object--> 
+      <li><a href="#3-contact">Socials!</a></li> <!-- this is a list object--> 
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="1-about" class="content-section">
+      <h2 class="greentext">About Me</h2>
+
+      <p> Hello! My name is Unna Lael Tabbada Jaldon, a student in PSHS-MC, 9-Rubidium with a lot of unique interests. I was born on November 20, 2011, and I have one younger sister. </p>
+      
+   
+    </section>
+    
+    <section id="2-services" class="content-section">
+      <h2 class="bluetext">Interests !</h2> 
+      <p> Want to get to know me? Here are some of my favorites: </p>  
+      <ul>
+        <li>Games: Any horror games! I like games with deeper themes hehe </li> 
+        <li>Color: Pinks, purples, and blues! </li> 
+        <li>Hobbies: Writing, reading, singing, acting, learing :D </li> 
+      </ul>
+    </section>
+    
+    <section id="3-contact" class="content-section">
+      <h2 class="yellowtext">Contact Details!</h2> 
+      <p> See below: </p>  
+      <p> Email: b2029ultjaldon@pshs.edu.ph </p> <!-- paragraph --> 
+      <p> Contact number: 0995 774 4944 </p> <!-- paragraph --> 
+      <p> Discord: barneyandfirstladyschild </p>
+    </section>
+    
+    <button id="myButton"> Click me! </button>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Me. All rights reserved.</p>
+  </footer>
+  
+  <script src="script.js"></script>
+  
+</body> 
+  
+</html>
+
