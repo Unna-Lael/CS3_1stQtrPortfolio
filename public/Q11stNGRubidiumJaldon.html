@@ -97,6 +97,19 @@
     let maxage = 100;
     let numPerDay = 2;
 
+  let input = prompt("Please enter your age");
+  let input2 = prompt ("Please enter maxAge");
+  let input3 = prompt("Please enter numPerDay");
+    let sure = confirm(`You entered: "${input}". Are you sure?`);
+    let sure2 = confirm (`You entered:"${input2}". Are you sure?`);
+    let sure3 = confirm (`You entered:"${input3}". Are you sure?`);
+    if (sure == sure2 == sure3) {
+        console.log("Yay!", input);
+    } else {
+        console.log("Huh??");
+    }
+
+
     let totalRequired = (numPerDay * 365) * (maxage - age);
 
     document.getElementById("result").textContent =
