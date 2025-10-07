@@ -1,28 +1,49 @@
-<h1>Guess My Word</h1>
-<p id="wordDisplay"></p>
-<input type="text" id="guessInput" maxlength="1">
-<button onclick="makeGuess()">Guess</button>
-<p id="message"></p>
-
-<title>Guess the Word</title>
+<!DOCTYPE html>
+<html>
+<head>
+<title>~ Guess the Word ~</title>
 <style>
+    .game-box {
+        background: white;         
+        padding: 20px;             
+        border: 3px solid rgb(65, 4, 26);  
+        border-radius: 10px;       
+        text-align: center;
+        box-shadow: 4px 4px 10px rgba(89, 4, 38, 0.2);
+    }
+    
     body {
         background-color: rgb(253, 127, 169);
-        text-align: center;
-        font-family: Arial, sans-serif;
+        font-family: Tahoma, sans-serif;
+        display: flex;              
+        justify-content: center;    
+        align-items: center;        
+        height: 100vh;           
+        margin: 0;                  
     }
 </style>
 </head>
-</style>
 <body>
+  <div class="game-box">
+    <h1>~ Guess My Word ~</h1>
+    <p id="wordDisplay"></p>
+    <input type="text" id="guessInput" maxlength="1">
+    <button onclick="makeGuess()">Guess</button>
+    <p id="message"></p>
+    <p id="attempts"></p>
+  </div>
+
 <script>
   let secretWord = ["u", "n", "i", "q", "u", "e"];
   let guessedWord = ["_", "_", "_", "_", "_", "_"];
+  let attempts = 6;
 
   document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
+  document.getElementById("attempts").textContent = "Attempts left: " + attempts;
 
   function makeGuess() {
     let guess = document.getElementById("guessInput").value.toLowerCase();
+    document.getElementById("guessInput").value = "";
     let correct = false;
 
     for (let i = 0; i < secretWord.length; i++) {
@@ -32,11 +53,18 @@
       }
     }
 
+    if (!correct) attempts--;
+
     document.getElementById("wordDisplay").textContent = guessedWord.join(" ");
     document.getElementById("message").textContent = correct ? "✅ Correct!" : "❌ Try again.";
-    document.getElementById("guessInput").value = "";
+    document.getElementById("attempts").textContent = "Attempts left: " + attempts;
+
+    if (guessedWord.join("") === secretWord.join("")) {
+      document.getElementById("message").textContent = "🎉 You guessed it!";
+    } else if (attempts <= 0) {
+      document.getElementById("message").textContent = "💀 Game over! The word was: " + secretWord.join("");
+    }
   }
-
-
 </script>
 </body>
+</html>
